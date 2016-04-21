@@ -1,7 +1,7 @@
 {
-  "name": "jwplayer-url-generetor",
-  "version": "1.0.2",
-  "description": "Generate jwPlayer URLs",
+  "name": "jwplayer-api",
+  "version": "0.0.2",
+  "description": "Wraper for jwPlayer platform api",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
