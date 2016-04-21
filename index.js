@@ -119,6 +119,25 @@ class JwPlatformApi {
 		});
 	}
 
+	conversionCreate(video_key, template_key) {
+		const url = this.generateUrl('/videos/conversions/create', {
+			video_key,
+			template_key
+		});
+		return new Promise((resolve, reject) => {
+			axios.get(url)
+				.then((response) => {
+					return response.data;
+				})
+				.then((response) => {
+					resolve(response);
+				})
+				.catch((error) => {
+					reject(error);
+				});
+		});
+
+	}
 
 }
 
