@@ -62,7 +62,8 @@ class JwPlatformApi {
         return params;
     }
 
-    getUploadUrl(params = {}) {
+    getUploadUrl(params) {
+        params = params || {};
         const url = this.generateUrl('v1/videos/create', params);
         return new Promise((resolve, reject) => {
             axios({method: 'get', url, params}).then((response) => {
