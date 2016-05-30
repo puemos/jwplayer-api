@@ -1,4 +1,4 @@
-{
+npm publish{
   "name": "jwplayer-api",
   "version": "0.1.0",
   "description": "Wraper for jwPlayer platform api",
