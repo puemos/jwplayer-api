@@ -1,6 +1,6 @@
-# jwplayer-api [![Build Status](https://travis-ci.org/babel/gulp-babel.svg?branch=master)](https://travis-ci.org/babel/gulp-babel)
+# jwplayer-api [![Build Status](https://travis-ci.org/Puemos/jwplayer-api.svg?branch=master)](https://travis-ci.org/Puemos/jwplayer-api)
 
-> A warpper for jwplayer platform api
+> A wrapper for jwplayer platform API
 
 
 
