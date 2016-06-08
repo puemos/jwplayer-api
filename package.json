@@ -1,10 +1,9 @@
 {
   "name": "jwplayer-api",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "Wraper for jwPlayer platform api",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Shy Alter",
   "license": "MIT",
   "repository": {
