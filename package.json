@@ -1,6 +1,6 @@
 {
   "name": "jwplayer-api",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Wraper for jwPlayer platform api",
   "main": "index.js",
   "scripts": {},
