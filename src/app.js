@@ -11,6 +11,7 @@ const Promise = require("bluebird"),
 class JwPlatformApi {
 
   constructor(config = {}) {
+    this.config = config;
     if (!this.config.key) {
       throw new Error('Must provide a jwPlatform key in config.key');
     }
