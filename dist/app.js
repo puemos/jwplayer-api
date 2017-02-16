@@ -13,10 +13,10 @@ var Promise = require("bluebird"),
     urlModule = require('url');
 
 var JwPlatformApi = function () {
-  function JwPlatformApi(config) {
-    _classCallCheck(this, JwPlatformApi);
+  function JwPlatformApi() {
+    var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-    this.config = config || {};
+    _classCallCheck(this, JwPlatformApi);
 
     if (!this.config.key) {
       throw new Error('Must provide a jwPlatform key in config.key');
@@ -64,11 +64,17 @@ var JwPlatformApi = function () {
     }
   }, {
     key: 'getUploadUrl',
-    value: function getUploadUrl(params) {
-      params = params || {};
-      var url = this.generateUrl('v1/videos/create', params);
+    value: function getUploadUrl() {
+      var baseURL = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'v1/videos/create';
+      var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+      var url = this.generateUrl(baseURL, params);
       return new Promise(function (resolve, reject) {
-        axios({ method: 'get', url: url, params: params }).then(function (response) {
+        axios({
+          method: 'get',
+          url: url,
+          params: params
+        }).then(function (response) {
           var link = response.data.link;
 
           var result = {
@@ -101,7 +107,9 @@ var JwPlatformApi = function () {
   }, {
     key: 'delete',
     value: function _delete(video_key) {
-      var url = this.generateUrl('v1/videos/delete', { video_key: video_key });
+      var url = this.generateUrl('v1/videos/delete', {
+        video_key: video_key
+      });
       return new Promise(function (resolve, reject) {
         axios.get(url).then(function (response) {
           return response.data;
@@ -115,7 +123,10 @@ var JwPlatformApi = function () {
   }, {
     key: 'conversionCreate',
     value: function conversionCreate(video_key, template_key) {
-      var url = this.generateUrl('/videos/conversions/create', { video_key: video_key, template_key: template_key });
+      var url = this.generateUrl('/videos/conversions/create', {
+        video_key: video_key,
+        template_key: template_key
+      });
       return new Promise(function (resolve, reject) {
         axios.get(url).then(function (response) {
           return response.data;
@@ -128,8 +139,9 @@ var JwPlatformApi = function () {
     }
   }, {
     key: 'videosList',
-    value: function videosList(params) {
-      params = params || {};
+    value: function videosList() {
+      var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
       var url = this.generateUrl('v1/videos/list', params);
       return new Promise(function (resolve, reject) {
         axios.get(url).then(function (response) {

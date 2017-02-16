@@ -10,9 +10,7 @@ const Promise = require("bluebird"),
 
 class JwPlatformApi {
 
-  constructor(config) {
-    this.config = config || {};
-
+  constructor(config = {}) {
     if (!this.config.key) {
       throw new Error('Must provide a jwPlatform key in config.key');
     }
@@ -48,7 +46,7 @@ class JwPlatformApi {
     Object
       .keys(allParams)
       .sort()
-      .forEach(function(key) {
+      .forEach(function (key) {
         sortedParams[key] = allParams[key];
       });
 
@@ -62,11 +60,14 @@ class JwPlatformApi {
     return params;
   }
 
-  getUploadUrl(params) {
-    params = params || {};
-    const url = this.generateUrl('v1/videos/create', params);
+  getUploadUrl(baseURL = 'v1/videos/create', params = {}) {
+    const url = this.generateUrl(baseURL, params);
     return new Promise((resolve, reject) => {
-      axios({ method: 'get', url, params }).then((response) => {
+      axios({
+        method: 'get',
+        url,
+        params
+      }).then((response) => {
         var link = response.data.link;
 
         var result = {
@@ -99,7 +100,9 @@ class JwPlatformApi {
   }
 
   delete(video_key) {
-    const url = this.generateUrl('v1/videos/delete', { video_key });
+    const url = this.generateUrl('v1/videos/delete', {
+      video_key
+    });
     return new Promise((resolve, reject) => {
       axios
         .get(url)
@@ -116,7 +119,10 @@ class JwPlatformApi {
   }
 
   conversionCreate(video_key, template_key) {
-    const url = this.generateUrl('/videos/conversions/create', { video_key, template_key });
+    const url = this.generateUrl('/videos/conversions/create', {
+      video_key,
+      template_key
+    });
     return new Promise((resolve, reject) => {
       axios
         .get(url)
@@ -133,8 +139,7 @@ class JwPlatformApi {
 
   }
 
-  videosList(params) {
-    params = params || {};
+  videosList(params = {}) {
     const url = this.generateUrl('v1/videos/list', params);
     return new Promise((resolve, reject) => {
       axios
