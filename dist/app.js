@@ -18,6 +18,7 @@ var JwPlatformApi = function () {
 
     _classCallCheck(this, JwPlatformApi);
 
+    this.config = config;
     if (!this.config.key) {
       throw new Error('Must provide a jwPlatform key in config.key');
     }
