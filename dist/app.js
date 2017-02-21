@@ -66,8 +66,8 @@ var JwPlatformApi = function () {
   }, {
     key: 'getUploadUrl',
     value: function getUploadUrl() {
-      var baseURL = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'v1/videos/create';
-      var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      var baseURL = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'v1/videos/create';
 
       var url = this.generateUrl(baseURL, params);
       return new Promise(function (resolve, reject) {
