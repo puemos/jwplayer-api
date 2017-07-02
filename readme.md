@@ -2,6 +2,8 @@
 
 > A wrapper for jwplayer platform API
 
+[![NPM](https://nodei.co/npm/jwplayer-api.png?downloads=true)](https://nodei.co/npm/jwplayer-api/)
+
 
 
 ## Install
