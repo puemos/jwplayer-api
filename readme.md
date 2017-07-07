@@ -18,48 +18,37 @@ $ npm install --save-dev jwplayer-api
 ```js
 'use strict';
 
-const
-	axios = require("axios"),
-	jwplayerUrlGeneretor = require('jwplayer-api');
-
-
+const axios = require("axios");
+const jwplayerUrlGeneretor = require('jwplayer-api');
 
 const api = new jwplayerUrlGeneretor({
-	key: 'myKey',
-	secret: 'mySecret'
+    key: "myKey",
+    secret: "mySecret"
 });
 
-/**/
+const myApi = {
+    getUploadUrl: params => {
+        return api.getUploadUrl(params);
+    },
 
+    delete: video_key => {
+        return api.delete(video_key);
+    },
 
+    getVideoDetails: video_key => {
+        return axios({
+            method: "get",
+            url: api.generateUrl("v1/videos/show", {
+                video_key
+            })
+        }).then(res => {
+            return res.data;
+        });
+    },
 
-module.exports = {
-
-	getUploadUrl: (params) => {
-		return api.getUploadUrl(params);
-	},
-
-	delete: (video_key) => {
-		return api.delete(video_key);
-	},
-
-	getVideoDetails: (video_key) => {
-		return axios({
-				method: 'get',
-				url: api.generateUrl('v1/videos/show', {
-					video_key
-				})
-
-			})
-			.then((res) => {
-				return res.data;
-			});
-	},
-
-	conversionCreate: (video_key, template_key) => {
-		return api.conversionCreate(video_key, template_key);
-	}
-
+    conversionCreate: (video_key, template_key) => {
+        return api.conversionCreate(video_key, template_key);
+    }
 };
 ```
 
