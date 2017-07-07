@@ -1,11 +1,13 @@
 {
     "name": "jwplayer-api",
-    "version": "1.3.4",
+    "version": "1.4.0",
     "description": "Wraper for JwPlayer platform api",
     "main": "dist/index.js",
     "author": "Shy Alter",
     "license": "MIT",
-    "files": ["dist"],
+    "files": [
+        "dist"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/Puemos/jwplayer-api.git"
@@ -17,7 +19,13 @@
         "test": "istanbul cover _mocha",
         "tdd:mac": "./node_modules/.bin/mocha -w"
     },
-    "keywords": ["video", "jw", "player", "jwplayer", "jwplatform"],
+    "keywords": [
+        "video",
+        "jw",
+        "player",
+        "jwplayer",
+        "jwplatform"
+    ],
     "dependencies": {
         "axios": "^0.16.2",
         "bluebird": "^3.5.0",
