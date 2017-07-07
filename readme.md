@@ -1,4 +1,4 @@
-# jwplayer-api [![Build Status](https://travis-ci.org/Puemos/jwplayer-api.svg?branch=master)](https://travis-ci.org/Puemos/jwplayer-api)
+# jwplayer-api [![Build Status](https://travis-ci.org/puemos/jwplayer-api.svg?branch=master)](https://travis-ci.org/Puemos/jwplayer-api)
 
 > A wrapper for jwplayer platform API
 
