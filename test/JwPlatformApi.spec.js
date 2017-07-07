@@ -1,7 +1,7 @@
 "use strict";
 const url = require("url");
 
-const jwplayerUrlGeneretor = require("../");
+const jwplayerUrlGeneretor = require("../dist");
 const TEST_PATH = "TEST_PATH";
 const key = "myKey";
 const secret = "mySecret";
