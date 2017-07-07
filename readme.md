@@ -24,7 +24,7 @@ const
 
 
 
-var api = new jwplayerUrlGeneretor({
+const api = new jwplayerUrlGeneretor({
 	key: 'myKey',
 	secret: 'mySecret'
 });
