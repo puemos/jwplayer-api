@@ -1,9 +1,6 @@
-# jwplayer-api [![Build Status](https://travis-ci.org/puemos/jwplayer-api.svg?branch=master)](https://travis-ci.org/Puemos/jwplayer-api)
+# jwplayer-api [![Build Status](https://travis-ci.org/puemos/jwplayer-api.svg?branch=master)](https://travis-ci.org/puemos/jwplayer-api)
 
 > A wrapper for jwplayer platform API
-
-[![NPM](https://nodei.co/npm/jwplayer-api.png?downloads=true)](https://nodei.co/npm/jwplayer-api/)
-
 
 
 ## Install
@@ -19,9 +16,9 @@ $ npm install --save-dev jwplayer-api
 'use strict';
 
 const axios = require("axios");
-const jwplayerUrlGeneretor = require('jwplayer-api');
+const JwplayerApi = require('jwplayer-api');
 
-const api = new jwplayerUrlGeneretor({
+const api = new JwplayerApi({
     key: "myKey",
     secret: "mySecret"
 });
