@@ -1,4 +1,4 @@
-# jwplayer-api [![Build Status](https://travis-ci.org/puemos/jwplayer-api.svg?branch=master)](https://travis-ci.org/puemos/jwplayer-api)
+# jwplayer-api [![Build Status](https://travis-ci.org/puemos/jwplayer-api.svg?branch=master)](https://travis-ci.org/puemos/jwplayer-api) [![Greenkeeper badge](https://badges.greenkeeper.io/puemos/jwplayer-api.svg)](https://greenkeeper.io/)
 
 > A wrapper for jwplayer platform API
 

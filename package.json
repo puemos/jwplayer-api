@@ -29,20 +29,20 @@
         "jwplatform"
     ],
     "dependencies": {
-        "axios": "^0.16.2",
+        "axios": "^0.19.0",
         "nonce": "^1.0.3"
     },
     "devDependencies": {
-        "babel-cli": "6.24.1",
-        "coveralls": "3.0.0",
-        "cross-env": "5.1.1",
-        "eslint": "^4.11.0",
-        "eslint-plugin-node": "^5.2.1",
-        "husky": "0.14.3",
-        "jest": "21.2.1",
-        "lint-staged": "5.0.0",
+        "babel-cli": "6.26.0",
+        "coveralls": "3.0.4",
+        "cross-env": "5.2.0",
+        "eslint": "^6.0.1",
+        "eslint-plugin-node": "^9.1.0",
+        "husky": "2.5.0",
+        "jest": "24.8.0",
+        "lint-staged": "8.2.1",
         "prettier": "^1.8.2",
-        "rimraf": "2.6.1"
+        "rimraf": "2.6.3"
     },
     "lint-staged": {
         "{src,test}/**/*.js": [
